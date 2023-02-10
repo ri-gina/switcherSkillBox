@@ -1,24 +1,88 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="switcherSkillBox" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="112" translatesAutoresizingMaskIntoConstraints="NO" id="7d6-n9-Ggi">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="69s-CS-CLE">
+                                        <rect key="frame" x="15" y="0.0" width="384" height="198"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Have a good day!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lgk-Nk-thu">
+                                                <rect key="frame" x="5" y="5" width="374" height="188"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.033322704081632654" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="Lgk-Nk-thu" firstAttribute="top" secondItem="69s-CS-CLE" secondAttribute="top" constant="5" id="2sc-dU-rdX"/>
+                                            <constraint firstItem="Lgk-Nk-thu" firstAttribute="leading" secondItem="69s-CS-CLE" secondAttribute="leading" constant="5" id="5MR-hD-yCm"/>
+                                            <constraint firstAttribute="trailing" secondItem="Lgk-Nk-thu" secondAttribute="trailing" constant="5" id="IF7-ZQ-oNy"/>
+                                            <constraint firstAttribute="bottom" secondItem="Lgk-Nk-thu" secondAttribute="bottom" constant="5" id="YRu-Dv-Nhg"/>
+                                        </constraints>
+                                    </view>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RFo-mB-Zgk">
+                                        <rect key="frame" x="182.5" y="310" width="51" height="198"/>
+                                        <connections>
+                                            <action selector="changeThere:" destination="BYZ-38-t0r" eventType="valueChanged" id="Sgp-vt-jxQ"/>
+                                        </connections>
+                                    </switch>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8as-39-pHL">
+                                        <rect key="frame" x="86" y="620" width="242" height="198"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nighty night!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JLE-XT-7bC">
+                                                <rect key="frame" x="5" y="5" width="232" height="188"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="JLE-XT-7bC" firstAttribute="leading" secondItem="8as-39-pHL" secondAttribute="leading" constant="5" id="OEh-Zs-Npk"/>
+                                            <constraint firstItem="JLE-XT-7bC" firstAttribute="top" secondItem="8as-39-pHL" secondAttribute="top" constant="5" id="Ocy-Kz-ACj"/>
+                                            <constraint firstAttribute="bottom" secondItem="JLE-XT-7bC" secondAttribute="bottom" constant="5" id="XQa-zs-TIr"/>
+                                            <constraint firstAttribute="trailing" secondItem="JLE-XT-7bC" secondAttribute="trailing" constant="5" id="kLU-e7-EE1"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="7d6-n9-Ggi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Vst-7V-ndQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7d6-n9-Ggi" secondAttribute="trailing" id="bFi-F7-oZD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="7d6-n9-Ggi" secondAttribute="bottom" id="vuX-e0-LU4"/>
+                            <constraint firstItem="7d6-n9-Ggi" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="zOC-gi-CR4"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="switcher" destination="RFo-mB-Zgk" id="5it-ys-rnh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-13" y="55"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
